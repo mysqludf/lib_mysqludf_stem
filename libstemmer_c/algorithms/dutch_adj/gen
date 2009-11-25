@@ -1,0 +1,1 @@
+./Snowball stem_ISO_8859_1.sbl -u -eprefix dutch_UTF_8_ -r ../runtime -o stem_UTF_8_dutch

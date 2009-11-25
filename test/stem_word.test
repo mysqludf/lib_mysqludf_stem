@@ -1,0 +1,21 @@
+##############################
+#
+# This is a file that can be run through mysqltest in order to perform some
+# basic testing on the functions in libmysql_udf_xql. This should
+# usually be invoked through the 'make test' command in the Makefile.
+#
+# Errors of UDFs do not have an error code, but can be caught using error 0.
+#
+#############################
+
+USE mysql;
+
+###
+# Tests for stem_word
+###
+
+error 0; SELECT stem_word();
+error 0; SELECT stem_word("dutch");
+SELECT stem_word("dutch", "deuren");
+SELECT stem_word("dutch", "deuren boekjes;stuiter stuiteren auto's");
+SELECT stem_word("english", "cars#bars#opening");

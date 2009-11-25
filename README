@@ -1,0 +1,22 @@
+MySQL UDF Repository
+lib_mysqludf_stem
+
+-----------------------
+
+The lib_mysqludf_stem library provides stemming capability for a variety of languages using
+Dr. M.F. Porter's Snowball API, which can be found at: http://snowball.tartarus.org
+
+For information about using this library, please see API
+
+-----------------------
+
+To build:
+ ./configure
+ make && make install
+
+To then load the functions:
+ mysql -u root -p < installdb.sql
+
+To remove the library from your system:
+ mysql -u root -p < uninstalldb.sql
+ make uninstall

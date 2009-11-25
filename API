@@ -1,0 +1,8 @@
+
+lib_mysqludf_stem_info()
+	Output the library version.
+
+
+stem_word(string language, string word)
+    Stem a word.
+    NOTE: The language should be constant for each row in a query. 

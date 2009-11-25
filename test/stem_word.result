@@ -1,0 +1,14 @@
+USE mysql;
+SELECT stem_word();
+ERROR HY000: stem_word() requires 2 arguments (language, word)
+SELECT stem_word("dutch");
+ERROR HY000: stem_word() requires 2 arguments (language, word)
+SELECT stem_word("dutch", "deuren");
+stem_word("dutch", "deuren")
+deur
+SELECT stem_word("dutch", "deuren boekjes;stuiter stuiteren auto's");
+stem_word("dutch", "deuren boekjes;stuiter stuiteren auto's")
+deur boek stuiter stuiter auto
+SELECT stem_word("english", "cars#bars#opening");
+stem_word("english", "cars#bars#opening")
+car bar open
